@@ -44,9 +44,8 @@ if len(staid) < 1:
 if len(waittime) < 1:
     print('等待时间为空，设置默认值：25秒')
     waittime = 25
+# ================简单的初始化【包含查询stationid】================
 
-
-# ================读取配置================
 # ================程序运行================
 def tourcheck(sta_id):
     indexurl = "https://maicai.api.ddxq.mobi/homeApi/newDetails?api_version=9.51.0&app_client_id=2&app_version=2.86.2&channel=applet&city_number=0101&station_id=" + sta_id
