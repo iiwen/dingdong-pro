@@ -56,7 +56,6 @@ public class Api {
             Map signMap = JSONUtil.toBean(object.toString(), Map.class);
             body.put("nars", signMap.get("nars"));
             body.put("sesi", signMap.get("sesi"));
-            String[] alimark = {"成功领取赠险", "安全到家", "已领取50万保障", "和家人团聚","在家中贴春联"};
 
         } catch (ScriptException | NoSuchMethodException e) {
             e.printStackTrace();
