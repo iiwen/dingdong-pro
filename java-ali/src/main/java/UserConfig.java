@@ -17,12 +17,15 @@ public class UserConfig {
     //收货地址id
     public static final String addressId = "";
 
+    //生成随机mark，此处填写抓包中任意的一个alipayminimark
+    public static final String alipaymarkdemo = "抓包随机填写一个";
     /**
      * 确认收货地址id和站点id
      * 每天抢之前先允许一下此接口 确认登录信息是否有效 如果失效了重新抓一次包
      */
     public static void main(String[] args) {
         Api.checkUserConfig();
+		System.out.println("【获取Alipaymark测试】"+Api.getMark(alipaymarkdemo));
     }
 
     /**
@@ -46,6 +49,7 @@ public class UserConfig {
         headers.put("content-type", "application/x-www-form-urlencoded");
         headers.put("accept-charset", "utf-8");
         headers.put("accept", "*/*");
+        headers.put("alipayminimark",Api.getMark(alipaymarkdemo));
         // ------------  填入以下6项 上面不要动 ------------
         headers.put("ddmc-device-id", "抓包");
         headers.put("cookie", "抓包");
